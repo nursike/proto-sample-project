@@ -1,0 +1,11 @@
+syntax = "proto3";
+package kz.nursike.content;
+
+option go_package = "github.com/nursike/proto-sample-project/content";
+option swift_prefix = "";
+
+
+message Video {
+  string id = 1;
+  string name = 2;
+}

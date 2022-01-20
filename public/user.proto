@@ -1,0 +1,20 @@
+syntax = "proto3";
+package kz.nursike.user;
+
+option go_package = "github.com/nursike/proto-sample-project/user";
+option swift_prefix = "";
+
+import "content.proto";
+
+message GetUserRequest {
+  string id = 1;
+}
+
+message GetUserResponse {
+  string name = 1;
+  content.Video video = 2;
+}
+
+service Users {
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+}
